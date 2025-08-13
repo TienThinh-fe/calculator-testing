@@ -3,5 +3,5 @@ import { SimpleCalculator } from '../calculator.js'
 
 Given('I have a calculator', function () {
   this.calculator = new SimpleCalculator()
-  console.log('Pass - Calculator is ready to use')
+  console.log('OK - Calculator is ready to use for testing')
 })
