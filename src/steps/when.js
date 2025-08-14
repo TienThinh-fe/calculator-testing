@@ -16,6 +16,10 @@ When('I multiply {int} and {int}', function (firstNumber, secondNumber) {
 })
 
 When('I divide {int} by {int}', function (divisorNumber, dividendNumber) {
-  this.calculator.divide(divisorNumber, dividendNumber)
-  console.log(`Divide: ${divisorNumber} / ${dividendNumber}`)
+  try {
+    this.calculator.divide(divisorNumber, dividendNumber)
+  } catch (error) {
+    this.error = error.message
+    console.log(`Divide error: ${this.error}`)
+  }
 })

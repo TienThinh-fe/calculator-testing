@@ -8,5 +8,8 @@ Then('the result should be {int}', function (expectedResult) {
   )
   expect(expectedResult).equal(actualResult)
 })
-
-
+Then('the error message should be {string}', function (expectedError) {
+  const actualError = this.error
+  console.log(`Checking Expected: ${expectedError} and Actual: ${actualError}`)
+  expect(expectedError).equal(actualError)
+})
